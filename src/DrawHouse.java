@@ -22,6 +22,11 @@ public class DrawHouse {
 		drawFlatRoof();
 		drawPointyRoof();
 		
+		for (int i = 0; i < 10; i++) {
+			
+			
+		}
+		
 	}
 		
 	
