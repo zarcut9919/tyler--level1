@@ -1,4 +1,5 @@
 import java.awt.Color;
+import java.util.Random;
 
 import org.teachingextensions.logo.Tortoise;
 
@@ -7,9 +8,19 @@ public class DrawHouse {
 	
 		drawAtBottom();
 		Tortoise.setAngle(90);
-		drawFlatRoof("small");
-		drawFlatRoof("medium");
-		drawFlatRoof("large");
+		drawFlatRoof();
+		drawFlatRoof();
+		drawFlatRoof();
+		drawFlatRoof();
+		drawFlatRoof();
+		drawFlatRoof();
+		drawFlatRoof();
+		drawFlatRoof();
+		drawFlatRoof();
+		drawFlatRoof();
+		drawFlatRoof();
+		drawFlatRoof();
+		drawPointyRoof();
 		
 	}
 		
@@ -22,20 +33,10 @@ public class DrawHouse {
 	Tortoise.setY(430);
 
 	}
-	static void drawFlatRoof(String height){
-		int size=0;
-		int small= 60;
-		int medium=120;
-		int large= 250;
-		if (height.equals("small")){
-		size=small;	
-		}
-		if (height.equals("medium")){
-			size=medium;
-		}
-		if (height.equals("large")){
-			size=large;
-		}
+	static void drawFlatRoof(){
+		int nick2=new Random().nextInt(200)+50;
+		
+		
 		
 		Tortoise.setSpeed(10);
 		Tortoise.penDown();
@@ -45,13 +46,31 @@ public class DrawHouse {
 		Tortoise.penDown();
 		Tortoise.setPenColor(Color.BLUE);
 		Tortoise.turn(-90);
-		Tortoise.move(size);
+		Tortoise.move(nick2);
 		Tortoise.turn(90);
 		Tortoise.move(50);
 		Tortoise.turn(90);
-		Tortoise.move(size);
+		Tortoise.move(nick2);
 		Tortoise.turn(-90);
 		
 	}
-	
+	static void drawPointyRoof(){
+		int nick=new Random().nextInt(200)+50;
+		Tortoise.setPenColor(Color.green);
+		Tortoise.move(50);
+		Tortoise.turn(-90);
+		Tortoise.setPenColor(Color.BLUE);
+		Tortoise.move(nick);
+		Tortoise.turn(45);
+		Tortoise.move(25);
+		Tortoise.turn(90);
+		Tortoise.move(25);
+		Tortoise.turn(45);
+		Tortoise.move(nick);
+		Tortoise.turn(-90);
+		Tortoise.setPenColor(Color.green);
+		Tortoise.move(50);
+
+		
+	}
 }
