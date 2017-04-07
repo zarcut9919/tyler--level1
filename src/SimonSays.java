@@ -48,7 +48,7 @@ public class SimonSays extends KeyAdapter {
     	j.dispose();
 
     	//12. call the method to show an image
-    	showImage();
+    	
 	}
 	private void showImage() {
     	//5. initialize your frame to a new JFrame()
